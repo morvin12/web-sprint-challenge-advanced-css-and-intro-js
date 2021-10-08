@@ -208,10 +208,10 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-console.log('task 1a:', artists[0]['name']);
+console.log('task 1a:', artists[0].name);
 
 //(2) Bio of the third artist (2nd index) in the array 
-console.log('task 1b:', artists[2]['bio']);
+console.log('task 1b:', artists[2].bio);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -219,7 +219,7 @@ console.log('task 1b:', artists[2]['bio']);
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
 
 artists[9]['name'] = 'Vincent Van Gogh';
-console.log('task 2:', artists[9]['name'])
+console.log('task 2:', artists[9].name)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
 Use getArtistByIndex to do the following:
@@ -250,7 +250,7 @@ function get20s(array) {
   let twentyCentury = []
   for(let i = 0; i < array.length; i++){
     if(artists[i].years >= 1900){
-      twentyCentury.push(artists[i].name)
+      twentyCentury.split(artists[i].name)
     }
   }
   return twentyCentury;
@@ -310,10 +310,13 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(array, names) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  for(let i = 0; i < array.length; i++){
+    if(array[i].paintings >= 100)
+return array;
 }
-
+}
+console.log('task 7:', lotsOfArt(artists));
 
 /* ***** END OF TASKS ***** */
 
